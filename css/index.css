@@ -1,0 +1,40 @@
+.box-containter {
+    width: 100%;
+    padding: 2%;
+}
+
+.box-containter > div {
+    width: 50%; 
+}
+
+.card {
+    background-color: #E7E7E7 !important;
+}
+
+.card-body {
+    padding: 2%;
+}
+
+.card-title {
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: x-large;
+}
+
+.section {
+    color: #B1B1B1;
+    font-weight: bold;
+    font-size: large;
+}
+
+.section > * {
+    margin-left: 8%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+input::placeholder {
+    color: #B1B1B1;
+    font-weight: 600;
+}
