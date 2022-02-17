@@ -29,7 +29,7 @@
 }
 
 .section > * {
-    margin-left: 8%;
+    padding-left: 8%;
     margin-top: 2%;
     margin-bottom: 2%;
 }
@@ -37,4 +37,9 @@
 input::placeholder {
     color: #B1B1B1;
     font-weight: 600;
+}
+
+.numbers > * {
+    margin-top: 2%;
+    margin-bottom: 2%;
 }
