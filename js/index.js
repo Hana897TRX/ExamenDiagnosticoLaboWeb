@@ -1,4 +1,5 @@
 import PhoneForm from './Components/PhoneForm.js'
+import AddressForm from './Components/AddressForm.js'
 
 document.addEventListener('DOMContentLoaded', (event) => {
     loaded()
@@ -8,6 +9,12 @@ function loaded() {
     document.getElementById("btnDone").addEventListener("click", () => { submitData() })
     document.getElementById("sectionPersonalNewNumberBtn").addEventListener("click", () => { AddNewPhoneNumber() })
     document.querySelector(".numbers").appendChild(new PhoneForm().GetComponent())
+    AddAddressSection()
+}   
+
+function AddAddressSection() {
+    let addessesContent = document.querySelector(".addresses")
+    let addressForm = new AddressForm().GetAddressForm(addessesContent)
 }
 
 function AddNewPhoneNumber() {

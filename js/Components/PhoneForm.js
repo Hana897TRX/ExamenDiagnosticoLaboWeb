@@ -1,4 +1,6 @@
-export default class PhoneNumberHtml {
+import InputComponent from './InputComponent.js'
+
+export default class PhoneForm {
     constructor() {
         this.root = document.createElement("div")
     }
@@ -21,11 +23,10 @@ export default class PhoneNumberHtml {
         return colDelete
     }
 
-    LadaInput() {
+    LadaSection() {
         let ladas = ["LADA", "+1", "+52", "+2"]
         
         let col = document.createElement("div")
-        col.className = "col-4"
 
         let section = document.createElement("select")
         section.className = "form-select"
@@ -43,12 +44,8 @@ export default class PhoneNumberHtml {
 
     NumberInput() {
         let col = document.createElement("div")
-        col.className = "col-6"
 
-        let input = document.createElement("input")
-        input.className = "form-control"
-        input.setAttribute("type", "text")
-        input.setAttribute("placeholder", "NUMBER")
+        let input = new InputComponent().GetInput("NUMBER")
 
         col.appendChild(input)
         return col
@@ -76,8 +73,11 @@ export default class PhoneNumberHtml {
         this.root.className = "row"
 
         let deleteButton = this.DeleteButton()
-        let ladaInput = this.LadaInput()
+        let ladaInput = this.LadaSection()
+        ladaInput.className = "col-3"
+
         let numberInput = this.NumberInput()
+        numberInput.className = "col-8"
 
         this.root.appendChild(deleteButton)
         this.root.appendChild(ladaInput)
