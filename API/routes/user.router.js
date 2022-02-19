@@ -34,6 +34,7 @@ router.get('/userPhone', async(req, res) => {
 
 router.post('/user', async (req, res) => {
     let data = req.body
+    console.log(data)
     const response = await service.SaveUser(data)
     res.status(200).json({'data' : response})
 })

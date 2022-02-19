@@ -91,6 +91,7 @@ function submitData() {
         body : data
     }).then((res) => {
         console.log(res)
+        location.reload(); 
     })
 }
 
