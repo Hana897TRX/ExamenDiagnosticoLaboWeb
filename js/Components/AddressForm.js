@@ -13,7 +13,7 @@ export default class AddressForm {
         let phoneForm = new PhoneForm()
         
         let lada = phoneForm.LadaSection()
-        let number = phoneForm.LadaSection()
+        let number = new InputComponent().GetInput("NUMBER")
 
         let col1 = document.createElement("div")
         col1.className = "col-3"
